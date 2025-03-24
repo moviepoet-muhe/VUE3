@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 呈现数据的容器：最终的网页结构都是放在app里面的，app表示的是application（应用程序） -->
+    <div id="app">
+        <!-- 胡子语法，类似于模板字符串，它里面放的是一个表达式 -->
+        <!-- <button @click="name='666'">改变内容</button> -->
+        <button @click="change">改变内容</button>
+        {{ name }}
+    </div>
+    <!-- 
+        CDN英文全称Content Delivery Network
+        + 中文翻译即为内容分发网络。它是建立并覆盖在承载网之上，由分布在不同区域的边缘节点服务器群组成的分布式网络
+        + CDN应用广泛，支持多种行业、多种场景内容加速，例如：图片小文件、大文件下载、视音频点播、直播流媒体、全站加速、安全加速 
+    -->
+    <script src="./libs/vue.global.js"></script>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    <script>
+        // 从引入的vue文件里面解构出一个createApp的函数，这个函数就可以帮助咱们创建一个vue的应用
+        const { createApp } = Vue
+        // 创建vue应用（所有的操作都是基于createApp这个函数），传入的{}表示的是配置项
+        const app = createApp({
+            // data选项，专门用来放数据地方，data里面的数据是响应式的，数据改变了，那么视图会跟着改变
+            data(){
+                return {
+                    name: '王江'
+                }
+            },
+            // methods选项，专门管理方法的地方
+            methods: {
+                change(){
+                    this.name = '张三'
+                }
+            }
+
+        }).mount('#app') // mount 挂载，表示把应用程序和app容器关联起来
+    </script>
+</body>
+</html>

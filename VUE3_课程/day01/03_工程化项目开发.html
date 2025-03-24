@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            工程化项目开发
+            + 如果把vue文件引入到页面，再使用vue相关的指令和提供的方法也可以开发，但是不便捷，项目的后期的维护和打包压缩非常的不方便
+            + 有人提出工程化开发的思想
+            + 工程化开发利于npm包管理器机制配合前端自动化构建工具，一起快速便捷的构建一个项目出来
+            + 工程化开发里面会把开发的项目目录创建好，并且可以让项目开发更为标准化
+            + 工程化开发里面构建工具会自带服务器插件和其他的配置选项，完全使用模块化的思维进行编程
+            + 项目的启动和包的管理都可以直接通过命令方式来处理
+            
+            创建vue项目
+            + pnpm create vue@latest  latest 表示最新的
+            + 执行了 `pnpm create vue@latest` 会自动进行项目的初始化，不需要再手动执行 `npm init -y` 命令
+            + `pnpm create vue@latest` 执行这个命名，默认使用的构建项目的工具是 vite
+
+            vue工程化项目目录和文件解释
+            + config 配置文件
+            + plugin 插件
+            + .gitignore 多人项目开发时，需要每天把代码任务完成后，需要上传到公共的代码仓库里面，这个文件表示项目里面那些文件是不需要上传到这个代码仓库的
+            是一个忽略文件
+            + README.md 项目说明书，项目如何下载依赖、怎么启动、使用什么命令进行打包等等
+            + .vscode vscode 配置文件目录，它里面放的的文件是关联着咱们的vue插件的
+            + public 公共的静态文件夹，它里面可以放状态栏图标、项目的图片、放第三方引入的文件（它里面的文件在vite工具打包压缩代码的时候不会进行处理，而是直接平移到dist目录里面）
+            + src目录，源文件目录，就是咱们开发时操作的目录
+              => assets目录，和public目录作用是一样的，只不过打包压缩的时候，会被vite工具处理
+              => components目录，是放公共组件的地方
+            + App.vue 根组件，最大的组件，其他的组件最终都会加载到这个组件里面，vite工具一次处理到index.html页面
+            + pnpm dev 表示启动项目，项目启动后，会自动生成一个服务器地址，直接打开这个地址就可以看到咱们的项目
+
+            component组件
+            + 组件是一种代码的扩展，vue中的组件扩展了html、css、js，组件把html、css、js进行整合，可以在组件里面写各种逻辑和业务代码
+            + 可以在组件里面同时进行页面的开发
+            + 后缀名为.vue的文件其实就是一个组件
+            + 后缀名为.vue文件的组件，只能在工程化项目里面运行。不能单独拿出来，直接通过浏览器打开，必须通过vite构建工具的处理，浏览器才能识别代码
+            + 后缀名为.vue文件也可以称之为单文件组件
+            + 组件组成
+              => template 标记，模板，里面专门放html结构代码的
+              => script 标记，行为，里面专门放逻辑代码的（可以是js、也可以是ts）
+              => style 标记，样式，里面专门放css代码的
+
+            常见的DOS命名操作
+            + cd 表示进入某个目录
+            + cd .. 表示返回上一级
+            + clear 表示清屏（cls window）
+        */
+        // function fn(){
+
+        // }
+        // fn()
+        // var arr = [1, 2, 3];
+
+        // console.log(10 === '10')
+
+        // console.log([] instanceof Object)
+        // console.log({} instanceof Object)
+
+        // Object.prototype.toString.call()
+
+        // Array.isArray()
+
+        // const arr = new Array(3)
+        // console.log(arr)
+    </script>
+</body>
+</html>

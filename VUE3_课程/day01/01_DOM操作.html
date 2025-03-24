@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <button>改变内容</button>
+        <h1>你好啊</h1>
+    </div>
+    <script>
+        // 传统的DOM操作：先获取元素、在根据条件、输出不同的内容
+        const h1 = document.querySelector('h1')
+        const btn = document.querySelector('button')
+
+        // let isShow = false
+
+        // if(isShow){
+        //     h1.innerHTML = '哈哈'
+        // }else{
+        //     h1.innerHTML = '嘿嘿'
+        // }
+
+        btn.onclick = ()=>{
+            h1.innerHTML = '嘿嘿'
+        }
+    </script>
+</body>
+</html>
